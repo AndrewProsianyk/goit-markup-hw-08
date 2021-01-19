@@ -66,40 +66,36 @@
   }
   .info-head {
     display: inline-block;
-    justify-content: center;   
+    text-align: center;
+    
     @media screen and (min-width:768px) {
+      text-align: left;
+      margin-left: auto;
+      justify-content: center;
+      padding: 17px 0px;
+    }
+
+    @media screen and (min-width:1200px) {
       display: flex;
-    
     }
   }
   
   
-  @media screen and (min-width:768px) {
+  @media screen and (min-width:1200px) {
     .info-link + .info-link {
-      margin-left: 50px;
+      margin-left: 30px;
     }
   }
-  .info-head .info-link {
-    // display: flex;
-    
+  .info-link {    
+    display: block;
     color: $primary-text-color;
     font-weight: 500;
     font-size: 18px;
     line-height: 1.14;
     letter-spacing: 0.02em;
     align-items: center;
+    
     transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-    
-  }
-  .info-icon {
-    fill: $primary-text-color;
-    margin-right: 10px;
-    transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
-    
-  }
-  
-  .info-link {
-    display: block;
     &:first-child {
       margin-bottom: 16px;
     }
@@ -112,7 +108,32 @@
     &:focus .info-icon {
       fill: $accent-color;
     }
+
+    @media screen and (min-width:768px){
+      display: flex;
+      font-size: 12px;
+      line-height: 1.16;
+      &:first-child {
+        margin-bottom: 10px;
+      }
+    }
+
+    @media screen and (min-width:1200px){
+      font-size: 14px;
+      line-height: 1.14;
+      &:first-child {
+        margin-bottom: 0px;
+      }
+    }
   }
+  .info-icon {
+    fill: $primary-text-color;
+    margin-right: 10px;
+    transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    
+  }
+  
+  
 
   .item.current::after {
     display: block;
@@ -126,10 +147,10 @@
   }
   .menu-container {
     
-    padding: 60px 0px;
+    width: 100%;
     background-color: #ffffff;
-    border-top: 1px solid #ececec;
-    z-index: 5;
+    
+    z-index: 1;
     text-align: center;
 
     
@@ -137,7 +158,8 @@
     @media screen and (max-width:767px) {
       display: none;
       position: absolute;
-      width: 100%;
+      padding: 60px 0px;
+      border-top: 1px solid #ececec;
       top: 100%;
       left: 0;
       &.is-open {

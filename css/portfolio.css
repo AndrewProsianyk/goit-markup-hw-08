@@ -250,22 +250,32 @@ img {
 
 .info-head {
   display: inline-block;
-  justify-content: center;
+  text-align: center;
 }
 
 @media screen and (min-width: 768px) {
+  .info-head {
+    text-align: left;
+    margin-left: auto;
+    justify-content: center;
+    padding: 17px 0px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
   .info-head {
     display: flex;
   }
 }
 
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 1200px) {
   .info-link + .info-link {
-    margin-left: 50px;
+    margin-left: 30px;
   }
 }
 
-.info-head .info-link {
+.info-link {
+  display: block;
   color: #757575;
   font-weight: 500;
   font-size: 18px;
@@ -273,16 +283,6 @@ img {
   letter-spacing: 0.02em;
   align-items: center;
   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-.info-icon {
-  fill: #757575;
-  margin-right: 10px;
-  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-.info-link {
-  display: block;
 }
 
 .info-link:first-child {
@@ -298,6 +298,33 @@ img {
   fill: #2196f3;
 }
 
+@media screen and (min-width: 768px) {
+  .info-link {
+    display: flex;
+    font-size: 12px;
+    line-height: 1.16;
+  }
+  .info-link:first-child {
+    margin-bottom: 10px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .info-link {
+    font-size: 14px;
+    line-height: 1.14;
+  }
+  .info-link:first-child {
+    margin-bottom: 0px;
+  }
+}
+
+.info-icon {
+  fill: #757575;
+  margin-right: 10px;
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
 .item.current::after {
   display: block;
   position: absolute;
@@ -310,10 +337,9 @@ img {
 }
 
 .menu-container {
-  padding: 60px 0px;
+  width: 100%;
   background-color: #ffffff;
-  border-top: 1px solid #ececec;
-  z-index: 5;
+  z-index: 1;
   text-align: center;
 }
 
@@ -321,7 +347,8 @@ img {
   .menu-container {
     display: none;
     position: absolute;
-    width: 100%;
+    padding: 60px 0px;
+    border-top: 1px solid #ececec;
     top: 100%;
     left: 0;
   }
@@ -489,7 +516,7 @@ img {
   border-bottom: 1px solid #eeeeee;
   border-left: 1px solid #eeeeee;
   border-right: 1px solid #eeeeee;
-  padding: 20px 24px;
+  padding: 20px 18px;
 }
 
 .project-title {
@@ -603,15 +630,34 @@ img {
 }
 
 .page-footer {
-  display: flex;
   background-color: #2f303a;
   padding-top: 60px;
   padding-bottom: 60px;
   text-align: center;
 }
 
+@media screen and (min-width: 1200px) {
+  .page-footer {
+    display: flex;
+    text-align: left;
+  }
+}
+
 .address-container {
-  margin-bottom: 60px;
+  display: inline-block;
+}
+
+@media screen and (max-width: 1199px) {
+  .address-container {
+    margin-bottom: 60px;
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1199px) {
+  .address-container {
+    margin-left: 76px;
+    display: block;
+  }
 }
 
 .join-text {
@@ -625,15 +671,26 @@ img {
   text-transform: uppercase;
 }
 
+.media-container {
+  display: block;
+}
+
 @media screen and (max-width: 767px) {
   .media-container {
     margin-bottom: 60px;
   }
 }
 
+@media screen and (min-width: 768px) and (max-width: 1199px) {
+  .media-container {
+    margin-left: 165px;
+  }
+}
+
 @media screen and (min-width: 1200px) {
   .media-container {
     margin-top: 12px;
+    margin-left: 70px;
   }
 }
 
@@ -643,6 +700,19 @@ img {
 
 .address-list-item:not(:last-child) {
   margin-bottom: 9px;
+}
+
+.footer-container {
+  display: block;
+  flex-wrap: nowrap;
+}
+
+@media screen and (min-width: 768px) {
+  .footer-container.container {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: baseline;
+  }
 }
 
 .footer-media-list {
@@ -689,12 +759,19 @@ img {
 
 .subscription-form {
   display: inline-block;
-  width: 100%;
 }
 
-@media screen and (min-width: 768px) {
+@media screen and (max-width: 1199px) {
   .subscription-form {
+    width: 100%;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .subscription-form {
+    display: block;
     margin-top: 12px;
+    margin-left: auto;
   }
 }
 
@@ -713,6 +790,12 @@ img {
 .mail-send {
   display: inline-block;
   width: 100%;
+}
+
+@media screen and (min-width: 768px) {
+  .mail-send {
+    justify-content: center;
+  }
 }
 
 @media screen and (min-width: 1200px) {
@@ -738,40 +821,39 @@ img {
   display: block;
   background-color: inherit;
   width: 100%;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 1.2;
+  letter-spacing: 0.03em;
+  color: rgba(255, 255, 255, 0.6);
   padding: 15px;
   border: 1px solid rgba(255, 255, 255, 0.3);
   filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
   border-radius: 4px;
 }
 
+.mail-input::placeholder {
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 1.2;
+  letter-spacing: 0.03em;
+  color: rgba(255, 255, 255, 0.6);
+}
+
 @media screen and (max-width: 1199px) {
   .mail-input {
     margin-bottom: 20px;
     max-width: 450px;
+    display: inline-block;
   }
 }
 
 @media screen and (min-width: 1200px) {
   .mail-input {
     width: 358px;
+    margin-right: 12px;
   }
-}
-
-.mail-input {
-  font-style: normal;
-  font-weight: normal;
-  font-size: 16px;
-  line-height: 20px;
-  letter-spacing: 0.03em;
-  color: rgba(255, 255, 255, 0.6);
-}
-
-.mail-input::placeholder {
-  font-style: normal;
-  font-weight: normal;
-  font-size: 16px;
-  line-height: 20px;
-  letter-spacing: 0.03em;
-  color: rgba(255, 255, 255, 0.6);
 }
 /*# sourceMappingURL=portfolio.css.map */
