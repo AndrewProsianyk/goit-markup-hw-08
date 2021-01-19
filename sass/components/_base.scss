@@ -1,0 +1,68 @@
+body {
+  font-family: $primary-text-font, sans-serif;
+  color: $primary-text-color;
+  // @media screen and (max-width:767px) {
+  //   padding-top: 62px;
+  // }
+}
+
+ul {
+  list-style: none;
+  padding-inline-start: 0px;
+  margin: 0px;
+}
+
+p {
+  font-style: normal;
+  margin: 0px;
+}
+a {
+  text-decoration: none;
+  font-style: normal;
+}
+h1,
+h2,
+h3,
+h4 {
+  margin: 0px;
+}
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+.container {
+  padding-left: 15px;
+  padding-right: 15px;
+  margin-left: auto;
+  margin-right: auto;
+
+  @media screen and (min-width: 480px) {
+    width: 480px;
+  }
+
+  @media screen and (min-width: 768px) {
+    width: 768px;
+  }
+  
+  @media screen and (min-width: 1200px) {
+    width: 1200px;
+  }
+    
+}.button {  display: inline-block;  color: $secondary-title-color;  background-color: $accent-color;  min-width: 200px;  padding: 10px 32px;  font-weight: 700;  font-size: 16px;  line-height: 1.88;  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);  border: transparent;  border-radius: 4px;  justify-content: center;  align-items: center;  text-align: center;  letter-spacing: 0.06em;}
+
+.section-title {
+  color: $primary-title-color;
+  font-weight: 700;
+  font-size: 28px;
+  line-height: 1.16;
+  letter-spacing: 0.03em;
+  margin-bottom: 30px;
+  text-align: center;
+
+  @media screen and (min-width: 1200px) {
+    font-size: 36px;
+    margin-bottom: 50px;
+  }
+}

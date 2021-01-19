@@ -1,0 +1,186 @@
+@import "./logo";
+  .header-container {
+    display: flex;
+    position: relative;
+  }
+  .nav-content {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    @media screen and (max-width:767px) {
+      justify-content: space-between;
+    }
+  }
+
+.nav-list {
+  @media screen and (max-width:767px) {
+    margin-bottom: 60px;
+  }
+  @media screen and (min-width:768px) {
+    display: flex;
+  }
+}
+  @media screen and (max-width:767px) {
+    .nav-link:not(:last-child) {
+      margin-bottom: 40px;
+    }
+  }
+  .nav-link .item {
+    color: $primary-title-color;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 1.17;
+    letter-spacing: 0.02em;
+    
+    display: inline-block;
+    position: relative;
+    
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    
+    &:hover,
+    &:focus {
+      color: $accent-color;
+    }
+    
+    @media screen and (min-width:768px) {
+      padding-bottom: 32px;
+      padding-top: 32px;
+      font-size: 14px;
+      line-height: 1.15;
+    }
+  }
+  
+
+  @media screen and (min-width:768px) {
+    .nav-link + .nav-link {
+      margin-left: 50px;
+    }
+  }
+ 
+  
+  .nav-list .current {
+    color: $accent-color;
+    @media screen and (max-width:767px) {
+      padding-bottom: 8px;
+    }
+  }
+  .info-head {
+    display: inline-block;
+    justify-content: center;   
+    @media screen and (min-width:768px) {
+      display: flex;
+    
+    }
+  }
+  
+  
+  @media screen and (min-width:768px) {
+    .info-link + .info-link {
+      margin-left: 50px;
+    }
+  }
+  .info-head .info-link {
+    // display: flex;
+    
+    color: $primary-text-color;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 1.14;
+    letter-spacing: 0.02em;
+    align-items: center;
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    
+  }
+  .info-icon {
+    fill: $primary-text-color;
+    margin-right: 10px;
+    transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    
+  }
+  
+  .info-link {
+    display: block;
+    &:first-child {
+      margin-bottom: 16px;
+    }
+
+    &:hover,
+    &:focus {
+      color: $accent-color;
+    }
+    &:hover .info-icon,
+    &:focus .info-icon {
+      fill: $accent-color;
+    }
+  }
+
+  .item.current::after {
+    display: block;
+    position: absolute;
+    content: '';
+    width: 100%;
+    height: 4px;
+    bottom: 0;
+    background-color: $accent-color;
+    border-radius: 2px;
+  }
+  .menu-container {
+    
+    padding: 60px 0px;
+    background-color: #ffffff;
+    border-top: 1px solid #ececec;
+    z-index: 5;
+    text-align: center;
+
+    
+
+    @media screen and (max-width:767px) {
+      display: none;
+      position: absolute;
+      width: 100%;
+      top: 100%;
+      left: 0;
+      &.is-open {
+        display: block;
+      }
+    }
+    @media screen and (min-width:768px) {
+      display: flex;
+    }
+  }
+  
+  
+  
+.menu-button {
+  display: inline-flex;
+  margin: 0;
+  padding: 0;
+  border: none;
+  background-color: transparent;
+
+  & .icon-cross {
+    display: none;
+  }
+
+  &.is-open .icon-cross {
+    display: block;
+  }
+
+  &.is-open .icon-menu {
+    display: none;
+  }
+
+  @media screen and (min-width:768px) {
+    display: none;
+  }
+}
+.icon-cross, .icon-menu,
+.icon-cross, .icon-menu {
+  fill: $primary-title-color;
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.icon-cross, .icon-menu:hover,
+.icon-cross, .icon-menu:focus {
+  fill: $accent-color;
+}
