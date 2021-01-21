@@ -403,46 +403,56 @@ img {
 .hero-section {
   display: block;
   max-width: 1600px;
-  padding: 118px 0px;
+  padding-top: 118px;
+  padding-bottom: 118px;
   margin-left: auto;
   margin-right: auto;
   background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/mobile/hero-background.jpg);
   background-color: #c4c4c4;
   background-position: center;
-}
-
-@media screen and (min-device-pixel-ratio: 2), screen and (min-resolution: 192dpi), screen and (min-resolution: 2dppx) {
-  .hero-section {
-    background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("../images/mobile/hero-background@2x.jpg");
-  }
-}
-
-@media screen and (min-width: 768px) and (max-width: 1199px) {
-  .hero-section {
-    background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("../images/tablet/hero-background.jpg");
-  }
-}
-
-@media screen and (min-width: 768px) and (max-width: 1199px) and (min-device-pixel-ratio: 2), screen and (min-width: 768px) and (max-width: 1199px) and (min-resolution: 192dpi), screen and (min-width: 768px) and (max-width: 1199px) and (min-resolution: 2dppx) {
-  .hero-section {
-    background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("../images/tablet/hero-background@2x.jpg");
-  }
+  background-size: cover;
 }
 
 @media screen and (min-width: 1200px) {
   .hero-section {
-    background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("../images/desktop/hero-background.jpg");
+    padding-top: 200px;
+    padding-bottom: 200px;
   }
 }
 
-@media screen and (min-width: 1200px) and (min-device-pixel-ratio: 2), screen and (min-width: 1200px) and (min-resolution: 192dpi), screen and (min-width: 1200px) and (min-resolution: 2dppx) {
+@media screen and (min-device-pixel-ratio: 2), screen and (min-resolution: 192dpi), screen and (min-resolution: 2dppx) {
   .hero-section {
-    background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("../images/desktop/hero-background@2x.jpg");
+    background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/mobile/hero-background@2x.jpg);
+  }
+}
+
+@media screen and (min-width: 481px) and (max-width: 768px) {
+  .hero-section {
+    background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/tablet/hero-background.jpg);
+  }
+}
+
+@media screen and (min-width: 481px) and (max-width: 768px) and (min-device-pixel-ratio: 2), screen and (min-width: 481px) and (max-width: 768px) and (min-resolution: 192dpi), screen and (min-width: 481px) and (max-width: 768px) and (min-resolution: 2dppx) {
+  .hero-section {
+    background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/tablet/hero-background@2x.jpg);
+  }
+}
+
+@media screen and (min-width: 769px) {
+  .hero-section {
+    background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/desktop/hero-background.jpg);
+  }
+}
+
+@media screen and (min-width: 769px) and (min-device-pixel-ratio: 2), screen and (min-width: 769px) and (min-resolution: 192dpi), screen and (min-width: 769px) and (min-resolution: 2dppx) {
+  .hero-section {
+    background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/desktop/hero-background@2x.jpg);
   }
 }
 
 .hero-container {
   position: relative;
+  display: block;
   width: 360px;
   text-align: center;
   margin-left: auto;
@@ -469,7 +479,7 @@ img {
 @media screen and (min-width: 1200px) {
   .hero-title {
     font-size: 44px;
-    line-height: 1.36;
+    line-height: 1.37;
   }
 }
 
@@ -484,11 +494,13 @@ img {
 }
 
 .features-list {
-  margin: -15px;
+  margin-top: -15px;
+  margin-bottom: -15px;
 }
 
 @media screen and (min-width: 768px) {
   .features-list {
+    margin: -15px;
     display: flex;
     flex-wrap: wrap;
   }
@@ -497,7 +509,8 @@ img {
 .features-list .item {
   width: 100%;
   max-width: 450px;
-  margin: 15px;
+  margin-top: 15px;
+  margin-bottom: 15px;
 }
 
 .features-list .item:last-child {
@@ -506,6 +519,7 @@ img {
 
 @media screen and (min-width: 768px) {
   .features-list .item {
+    margin: 15px;
     width: 354px;
   }
 }
